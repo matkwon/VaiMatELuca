@@ -2,8 +2,8 @@ package br.edu.mateluca;
 
 public class Testador {
 	
-	private Produto pringles = new Produto("pringles", 1, 8.0); 
-	private Produto lays = new Produto("lays", 2, 10.0); 
+	private Produto Heineken = new Produto("Heineken", 1, 8.0); 
+	private Produto Budweiser = new Produto("Budweiser", 2, 10.0); 
 
 	public boolean testeA() {
 		Carrinho carrinho = new Carrinho();
@@ -17,7 +17,7 @@ public class Testador {
 
 	public boolean testeB() {
 		Carrinho carrinho = new Carrinho();
-		carrinho.adicionaProduto(this.pringles);
+		carrinho.adicionaProduto(this.Heineken);
 		
 		Caixa caixa = new Caixa();
 		double total = caixa.getTotal(carrinho);
@@ -29,10 +29,10 @@ public class Testador {
 
 	public boolean testeC() {
 		Carrinho carrinho = new Carrinho();
-		carrinho.adicionaProduto(this.lays);
+		carrinho.adicionaProduto(this.Budweiser);
 
 		Caixa caixa = new Caixa();
-		caixa.adicionaDesconto(this.lays, 10);
+		caixa.adicionaDesconto(this.Budweiser, 10);
 		
 		double total = caixa.getTotal(carrinho);
 		if (total == 9.0) {
@@ -43,12 +43,12 @@ public class Testador {
 
 	public boolean testeD() {
 		Carrinho carrinho = new Carrinho();
-		carrinho.adicionaProduto(this.pringles);
-		carrinho.adicionaProduto(this.pringles);
-		carrinho.adicionaProduto(this.lays);
+		carrinho.adicionaProduto(this.Heineken);
+		carrinho.adicionaProduto(this.Heineken);
+		carrinho.adicionaProduto(this.Budweiser);
 
 		Caixa caixa = new Caixa();
-		caixa.adicionaDesconto(this.pringles, 10);
+		caixa.adicionaDesconto(this.Heineken, 10);
 		
 		double total = caixa.getTotal(carrinho);
 		if (total == 24.4) {
@@ -59,12 +59,12 @@ public class Testador {
 
 	public boolean testeE() {
 		Carrinho carrinho = new Carrinho();
-		carrinho.adicionaProduto(this.pringles);
-		carrinho.adicionaProduto(this.lays);
-		carrinho.adicionaProduto(this.lays);
+		carrinho.adicionaProduto(this.Heineken);
+		carrinho.adicionaProduto(this.Budweiser);
+		carrinho.adicionaProduto(this.Budweiser);
 
 		Caixa caixa = new Caixa();
-		caixa.adicionaDesconto(this.lays, 15);
+		caixa.adicionaDesconto(this.Budweiser, 15);
 		
 		double total = caixa.getTotal(carrinho);
 		if (total == 25.0) {
