@@ -1,9 +1,5 @@
 package br.edu.mateluca;
 
-import org.junit.jupiter.api.BeforeEach;
-
-import br.edu.insper.desagil.aula5.Aluno;
-
 public class Testador {
 	
 	private Produto pringles = new Produto("pringles", 1, 8.0); 

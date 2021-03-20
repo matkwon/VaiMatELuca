@@ -2,27 +2,27 @@ package br.edu.mateluca;
 
 
 public class Produto {
-	
-	private int codigo;
-	private String nome;
-	private double preço;
-	
-	public Produto(int codigo, String nome, double preço) {
-		super();
-		this.codigo = codigo;
-		this.nome = nome;
-		this.preço = preço;
-	}
 
-	public int getCodigo() {
-		return codigo;
+	private String nome;
+	private int codigo;
+	private double preco;
+	
+	public Produto(String nome, int codigo, double preco) {
+		super();
+		this.nome = nome;
+		this.codigo = codigo;
+		this.preco = preco;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public double getPreço() {
-		return preço;
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public double getPreco() {
+		return preco;
 	}
 }

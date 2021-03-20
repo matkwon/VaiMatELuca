@@ -21,7 +21,7 @@ public class Carrinho {
 		for (Pedido pedido : pedidos) {
 			if (pedido.getProduto() == produto) {
 				existe = true;
-				pedido.incremento();
+				pedido.incrementaUm();
 			}
 		}
 		if (!existe) {

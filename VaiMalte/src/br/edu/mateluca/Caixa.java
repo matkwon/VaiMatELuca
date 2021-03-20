@@ -13,7 +13,7 @@ public class Caixa {
 	}
 	
 	public void adicionaDesconto(Produto produto, int desconto) {
-		if (desconto > 0 && desconto < 100) {
+		if (desconto > 0 && desconto < 100 && !descontos.containsKey(produto.getCodigo())) {
 			descontos.put(produto.getCodigo(), desconto);
 		}
 	}
@@ -24,7 +24,7 @@ public class Caixa {
 			Produto produto = pedido.getProduto();
 			int codigo = produto.getCodigo();
 			if (descontos.containsKey(codigo)) {
-				total += pedido.valorBruto() * (double) descontos.get(codigo)/100;
+				total += pedido.valorBruto() * (1 - (double) descontos.get(codigo)/100);
 			} else {
 				total += pedido.valorBruto();
 			}

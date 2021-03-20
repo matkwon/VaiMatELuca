@@ -19,12 +19,12 @@ public class Pedido {
 		return quantidade;
 	}
 	
-	public void incremento() {
-		quantidade++;
+	public void incrementaUm() {
+		this.quantidade++;
 	}
-		
-	public double devolveTotal(this.produto.getPreço(), this.quantidade){
-		double total = produto.preço*quantidade;
+	
+	public double valorBruto() {
+		double total = this.produto.getPreco() * this.quantidade;
 		return total;
 	}
 }
